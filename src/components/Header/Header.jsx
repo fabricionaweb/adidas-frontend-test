@@ -4,8 +4,8 @@ import styles from './Header.module.css';
 
 export function Header({ lead, title }) {
   return (
-    <header className={styles.header}>
-      <h1 className={styles.title}>
+    <header className={styles.wrapper}>
+      <h1 className={styles.heading}>
         {lead && <p>{lead}</p>}
 
         {title}
