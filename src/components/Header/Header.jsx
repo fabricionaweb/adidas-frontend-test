@@ -1,26 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Header.module.css';
 
-export function Header({ lead, title }) {
+export function Header() {
   return (
     <header className={styles.wrapper}>
       <h1 className={styles.heading}>
-        {lead && <p>{lead}</p>}
-
-        {title}
+        <p>Sign up form</p>
+        Get more information
       </h1>
     </header>
   );
 }
-
-Header.defaultProps = {
-  lead: null,
-};
-
-Header.propTypes = {
-  lead: PropTypes.string,
-  title: PropTypes.string.isRequired,
-};
 
 export default Header;
