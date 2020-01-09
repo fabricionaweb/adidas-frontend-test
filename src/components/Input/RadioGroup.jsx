@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './RadioGroup.module.css';
 
 export function RadioGroup(props) {
   const {
@@ -13,13 +14,13 @@ export function RadioGroup(props) {
       <li key={key}>
         <label htmlFor={key}>
           <input
+            className={styles.input}
             required={required}
             id={key}
             name={id}
             value={value}
             type="radio"
           />
-          {' '}
           {value}
         </label>
       </li>
@@ -27,10 +28,10 @@ export function RadioGroup(props) {
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       {label}
 
-      <ul>
+      <ul className={styles.list}>
         {values.map(radioOptions)}
       </ul>
     </div>

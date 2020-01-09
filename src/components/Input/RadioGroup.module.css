@@ -1,0 +1,18 @@
+.wrapper {
+  display: block;
+  margin: 2rem 0;
+}
+
+.list {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  margin-right: 0.5rem;
+}

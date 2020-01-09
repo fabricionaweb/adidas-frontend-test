@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Text.module.css';
 
 export function Text(props) {
   const {
@@ -7,10 +8,11 @@ export function Text(props) {
   } = props;
 
   return (
-    <label htmlFor={id}>
+    <label className={styles.label} htmlFor={id}>
       {label}
 
       <input
+        className={styles.input}
         required={required}
         placeholder={placeholder}
         id={id}

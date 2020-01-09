@@ -14,6 +14,14 @@ export function Form() {
           type="email"
         />
 
+        <Input.RadioGroup
+          label="Select your gender"
+          id="gender"
+          values={[
+            'Male', 'Female', 'Non-binary',
+          ]}
+        />
+
         <Input.Checkbox
           required
           label="I’m above a certain age"
@@ -23,14 +31,6 @@ export function Form() {
         <Input.Checkbox
           label="I want to receive a newsletter"
           id="newsletter"
-        />
-
-        <Input.RadioGroup
-          label="Select your gender"
-          id="gender"
-          values={[
-            'Male', 'Female', 'Non-binary',
-          ]}
         />
       </form>
     </section>

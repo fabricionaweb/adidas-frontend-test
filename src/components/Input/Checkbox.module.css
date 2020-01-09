@@ -1,0 +1,9 @@
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  display: inline-block;
+  margin-right: 0.5rem;
+}

@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Checkbox.module.css';
 
 export function Checkbox({ id, required, label }) {
   return (
-    <label htmlFor={id}>
-      {label}
-
+    <label className={styles.label} htmlFor={id}>
       <input
+        className={styles.input}
         required={required}
         id={id}
         type="checkbox"
       />
+      {label}
     </label>
   );
 }
