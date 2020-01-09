@@ -1,17 +1,23 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import * as yup from 'yup';
 import * as Input from '../Input';
 import styles from './Form.module.css';
 
-const validationSchema = yup.object().shape({
-  email: yup.string().email('invalid email').required('required'),
-  gender: yup.string(),
-  confirmAge: yup.boolean().oneOf([true], 'required'),
-  newsletter: yup.boolean(),
-});
-
 export function Form() {
+  const { t } = useTranslation();
+
+  const validationSchema = yup.object().shape({
+    email: yup.string()
+      .email(t('invalid email'))
+      .required(t('required')),
+    gender: yup.string(),
+    confirmAge: yup.boolean()
+      .oneOf([true], t('required')),
+    newsletter: yup.boolean(),
+  });
+
   const {
     register, handleSubmit, errors,
   } = useForm({ validationSchema });
@@ -28,9 +34,8 @@ export function Form() {
         <div className={styles.row}>
           <Input.Text
             ref={register}
-            label="Your e-mail"
+            label={t('Your e-mail')}
             error={errors.email}
-            placeholder="you@company.com"
             id="email"
             type="email"
           />
@@ -39,10 +44,10 @@ export function Form() {
         <div className={styles.row}>
           <Input.RadioGroup
             ref={register}
-            label="Select your gender"
+            label={t('Select your gender')}
             id="gender"
             values={[
-              'Male', 'Female', 'Non-binary',
+              t('Male'), t('Female'), t('Non-binary'),
             ]}
           />
         </div>
@@ -50,21 +55,21 @@ export function Form() {
         <div className={styles.row}>
           <Input.Checkbox
             ref={register}
-            label="I’m above a certain age"
+            label={t('I’m above a certain age')}
             error={errors.confirmAge}
             id="confirmAge"
           />
 
           <Input.Checkbox
             ref={register}
-            label="I want to receive a newsletter"
+            label={t('I want to receive a newsletter')}
             id="newsletter"
           />
         </div>
 
         <Input.Button
           type="submit"
-          label="Submit"
+          label={t('Submit')}
         />
       </form>
     </section>
