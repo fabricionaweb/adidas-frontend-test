@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './RadioGroup.module.css';
 
-export function RadioGroup(props) {
+export const RadioGroup = forwardRef((props, ref) => {
   const {
     id, required, label, values,
   } = props;
@@ -14,6 +14,7 @@ export function RadioGroup(props) {
       <li key={key}>
         <label htmlFor={key}>
           <input
+            ref={ref}
             className={styles.input}
             required={required}
             id={key}
@@ -38,7 +39,7 @@ export function RadioGroup(props) {
       </ul>
     </div>
   );
-}
+});
 
 RadioGroup.defaultProps = {
   required: false,

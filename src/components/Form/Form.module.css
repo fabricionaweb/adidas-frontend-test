@@ -7,3 +7,7 @@
 .form {
   max-width: 500px;
 }
+
+.row {
+  margin: 2rem 0;
+}

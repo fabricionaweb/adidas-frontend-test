@@ -1,31 +1,36 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Text.module.css';
 
-export function Text(props) {
+export const Text = forwardRef((props, ref) => {
   const {
-    id, required, placeholder, label, type,
+    id, required, placeholder, label, type, error,
   } = props;
 
   return (
     <label className={styles.label} htmlFor={id}>
       {label}
+      {' '}
+      {error.message && <span className={styles.error}>{error.message}</span>}
 
       <input
+        ref={ref}
         className={styles.input}
         required={required}
         placeholder={placeholder}
         id={id}
+        name={id}
         type={type}
       />
     </label>
   );
-}
+});
 
 Text.defaultProps = {
   required: false,
   placeholder: null,
   label: null,
+  error: {},
   type: 'text',
 };
 
@@ -34,6 +39,9 @@ Text.propTypes = {
   required: PropTypes.bool,
   placeholder: PropTypes.string,
   label: PropTypes.node,
+  error: PropTypes.shape({
+    message: PropTypes.string,
+  }),
   type: PropTypes.oneOf([
     'text', 'password', 'email', 'number', // others
   ]),

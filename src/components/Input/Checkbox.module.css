@@ -11,3 +11,8 @@
 .input:checked + .label {
   color: #0d83ff;
 }
+
+.error {
+  font-size: 0.875rem;
+  color: #ff270d;
+}
