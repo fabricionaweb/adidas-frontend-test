@@ -32,6 +32,11 @@ export function Form() {
           label="I want to receive a newsletter"
           id="newsletter"
         />
+
+        <Input.Button
+          type="submit"
+          label="Submit"
+        />
       </form>
     </section>
   );

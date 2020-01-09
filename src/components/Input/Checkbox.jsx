@@ -27,7 +27,7 @@ Checkbox.defaultProps = {
 Checkbox.propTypes = {
   id: PropTypes.string.isRequired,
   required: PropTypes.bool,
-  label: PropTypes.element,
+  label: PropTypes.node,
 };
 
 export default Checkbox;

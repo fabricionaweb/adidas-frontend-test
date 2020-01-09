@@ -33,7 +33,7 @@ Text.propTypes = {
   id: PropTypes.string.isRequired,
   required: PropTypes.bool,
   placeholder: PropTypes.string,
-  label: PropTypes.element,
+  label: PropTypes.node,
   type: PropTypes.oneOf([
     'text', 'password', 'email', 'number', // others
   ]),
