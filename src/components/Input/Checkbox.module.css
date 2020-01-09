@@ -1,4 +1,4 @@
-.label {
+.wrapper {
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -6,4 +6,8 @@
 .input {
   display: inline-block;
   margin-right: 0.5rem;
+}
+
+.input:checked + .label {
+  color: #0d83ff;
 }

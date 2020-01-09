@@ -4,14 +4,17 @@ import styles from './Checkbox.module.css';
 
 export function Checkbox({ id, required, label }) {
   return (
-    <label className={styles.label} htmlFor={id}>
+    <label className={styles.wrapper} htmlFor={id}>
       <input
         className={styles.input}
         required={required}
         id={id}
         type="checkbox"
       />
-      {label}
+
+      <span className={styles.label}>
+        {label}
+      </span>
     </label>
   );
 }

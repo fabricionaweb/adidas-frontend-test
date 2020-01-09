@@ -21,7 +21,9 @@ export function RadioGroup(props) {
             value={value}
             type="radio"
           />
-          {value}
+          <span className={styles.label}>
+            {value}
+          </span>
         </label>
       </li>
     );

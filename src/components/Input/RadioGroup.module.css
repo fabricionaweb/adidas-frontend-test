@@ -16,3 +16,7 @@
 .input {
   margin-right: 0.5rem;
 }
+
+.input:checked + .label {
+  color: #0d83ff;
+}
