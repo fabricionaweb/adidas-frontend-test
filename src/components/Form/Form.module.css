@@ -11,3 +11,8 @@
 .row {
   margin: 2rem 0;
 }
+
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}

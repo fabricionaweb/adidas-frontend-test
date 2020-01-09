@@ -22,6 +22,8 @@ const translation = {
 
   'invalid email': 'invalid email',
   required: 'required',
+
+  'Thank you.': 'Thank you.',
 };
 
 export default { translation };

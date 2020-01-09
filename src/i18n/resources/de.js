@@ -19,6 +19,8 @@ const translation = {
 
   'invalid email': 'ungültige e-mail',
   required: 'erforderlich',
+
+  'Thank you.': 'Danke.',
 };
 
 export default { translation };
