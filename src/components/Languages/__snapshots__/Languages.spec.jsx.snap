@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Languages.jsx should render without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="wrapper"
+  >
+    <div
+      class="container"
+    >
+      <select
+        data-testid="languages"
+      >
+        <option
+          value="en"
+        >
+          English
+        </option>
+        <option
+          value="de"
+        >
+          Germany
+        </option>
+      </select>
+    </div>
+  </div>
+</DocumentFragment>
+`;

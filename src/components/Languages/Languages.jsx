@@ -12,7 +12,11 @@ export function Languages() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <select value={i18n.language} onChange={changeLanguage}>
+        <select
+          data-testid="languages"
+          value={i18n.language}
+          onChange={changeLanguage}
+        >
           <option value="en">{t('English')}</option>
           <option value="de">{t('Germany')}</option>
         </select>
