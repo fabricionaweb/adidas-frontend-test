@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import * as yup from 'yup';
 import * as Input from '../Input';
+import { sendSignUp } from '../../services';
 import styles from './Form.module.css';
 
 export function Form() {
@@ -28,11 +29,9 @@ export function Form() {
   } = useForm({ validationSchema });
 
   const onSubmit = (data) => {
-    // submit should be here
-    Promise.resolve()
-      .then(() => setLoading(true))
-      .then(() => console.log(data))
-      .then(() => new Promise((resolve) => setTimeout(resolve, 1000)))
+    setLoading(true);
+
+    sendSignUp(data)
       .then(() => setComplete(true))
       .finally(() => setLoading(false));
   };
@@ -55,16 +54,16 @@ export function Form() {
           </div>
 
           {shouldDisplayGender && (
-          <div className={styles.row}>
-            <Input.RadioGroup
-              ref={register}
-              label={t('Select your gender')}
-              id="gender"
-              values={[
-                t('Male'), t('Female'), t('Non-binary'),
-              ]}
-            />
-          </div>
+            <div className={styles.row}>
+              <Input.RadioGroup
+                ref={register}
+                label={t('Select your gender')}
+                id="gender"
+                values={[
+                  t('Male'), t('Female'), t('Non-binary'),
+                ]}
+              />
+            </div>
           )}
 
           <div className={styles.row}>
@@ -76,11 +75,11 @@ export function Form() {
             />
 
             {shouldDisplayNewsletter && (
-            <Input.Checkbox
-              ref={register}
-              label={t('I want to receive a newsletter')}
-              id="newsletter"
-            />
+              <Input.Checkbox
+                ref={register}
+                label={t('I want to receive a newsletter')}
+                id="newsletter"
+              />
             )}
           </div>
 
