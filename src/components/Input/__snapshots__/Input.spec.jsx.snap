@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button.jsx should render without crashing 1`] = `
+<DocumentFragment>
+  <button
+    class="button"
+    data-testid="button-null"
+    type="button"
+  >
+    test
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Checkbox.jsx should render without crashing 1`] = `
+<DocumentFragment>
+  <label
+    class="wrapper"
+    for="test"
+  >
+    <input
+      class="input"
+      data-testid="checkbox-test"
+      id="test"
+      name="test"
+      type="checkbox"
+    />
+    <span
+      class="label"
+    >
+       
+    </span>
+  </label>
+</DocumentFragment>
+`;
+
+exports[`RadioGroup.jsx should render without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="wrapper"
+  >
+    <ul
+      class="list"
+    >
+      <li>
+        <label
+          for="test_0"
+        >
+          <input
+            class="input"
+            id="test_0"
+            name="test"
+            type="radio"
+            value="foo"
+          />
+          <span
+            class="label"
+          >
+            foo
+          </span>
+        </label>
+      </li>
+      <li>
+        <label
+          for="test_1"
+        >
+          <input
+            class="input"
+            id="test_1"
+            name="test"
+            type="radio"
+            value="bar"
+          />
+          <span
+            class="label"
+          >
+            bar
+          </span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Text.jsx should render without crashing 1`] = `
+<DocumentFragment>
+  <label
+    class="label"
+    for="test"
+  >
+     
+    <input
+      class="input"
+      data-testid="input-test"
+      id="test"
+      name="test"
+      type="text"
+    />
+  </label>
+</DocumentFragment>
+`;

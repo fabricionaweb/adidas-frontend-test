@@ -23,12 +23,13 @@ export function Button(props) {
 }
 
 Button.defaultProps = {
+  id: null,
   type: 'button',
   disabled: false,
 };
 
 Button.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   type: PropTypes.oneOf([
     'button', 'submit', 'reset',
   ]),
