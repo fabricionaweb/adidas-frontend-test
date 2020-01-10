@@ -41,7 +41,11 @@ export function Form() {
       {complete ? (
         <h2>{t('Thank you.')}</h2>
       ) : (
-        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <form
+          data-testid="form"
+          onSubmit={handleSubmit(onSubmit)}
+          className={styles.form}
+        >
 
           <div className={styles.row}>
             <Input.Text
@@ -84,6 +88,7 @@ export function Form() {
           </div>
 
           <Input.Button
+            id="submit"
             type="submit"
             label={t('Submit')}
           />

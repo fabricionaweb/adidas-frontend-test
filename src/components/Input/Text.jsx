@@ -11,9 +11,18 @@ export const Text = forwardRef((props, ref) => {
     <label className={styles.label} htmlFor={id}>
       {label}
       {' '}
-      {error.message && <span className={styles.error}>{error.message}</span>}
+
+      {error.message && (
+        <span
+          data-testid={`error-${id}`}
+          className={styles.error}
+        >
+          {error.message}
+        </span>
+      )}
 
       <input
+        data-testid={`input-${id}`}
         ref={ref}
         className={styles.input}
         required={required}

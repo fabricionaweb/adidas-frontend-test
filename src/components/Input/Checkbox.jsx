@@ -10,6 +10,7 @@ export const Checkbox = forwardRef((props, ref) => {
   return (
     <label className={styles.wrapper} htmlFor={id}>
       <input
+        data-testid={`checkbox-${id}`}
         ref={ref}
         className={styles.input}
         required={required}
@@ -21,7 +22,15 @@ export const Checkbox = forwardRef((props, ref) => {
       <span className={styles.label}>
         {label}
         {' '}
-        {error.message && <span className={styles.error}>{error.message}</span>}
+
+        {error.message && (
+          <span
+            data-testid={`error-${id}`}
+            className={styles.error}
+          >
+            {error.message}
+          </span>
+        )}
       </span>
     </label>
   );

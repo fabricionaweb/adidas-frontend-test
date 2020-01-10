@@ -1,41 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App.jsx should render without crashing 1`] = `
+exports[`Form.jsx should render without crashing 1`] = `
 <DocumentFragment>
-  <div
-    class="wrapper"
-  >
-    <div
-      class="container"
-    >
-      <select
-        data-testid="languages"
-      >
-        <option
-          value="en"
-        >
-          English
-        </option>
-        <option
-          value="de"
-        >
-          Germany
-        </option>
-      </select>
-    </div>
-  </div>
-  <header
-    class="wrapper"
-  >
-    <h1
-      class="heading"
-    >
-      <p>
-        Sign up form
-      </p>
-      Get more information
-    </h1>
-  </header>
   <section
     class="wrapper "
   >

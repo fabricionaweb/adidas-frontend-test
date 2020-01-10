@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.jsx should render without crashing 1`] = `
+<DocumentFragment>
+  <header
+    class="wrapper"
+  >
+    <h1
+      class="heading"
+    >
+      <p>
+        Sign up form
+      </p>
+      Get more information
+    </h1>
+  </header>
+</DocumentFragment>
+`;
